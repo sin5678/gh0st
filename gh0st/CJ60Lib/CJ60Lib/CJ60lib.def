@@ -1,0 +1,7 @@
+; CJ60Lib.def : Declares the module parameters for the DLL.
+
+;LIBRARY      "CJ60Lib"
+DESCRIPTION  'CJ60Lib Windows Dynamic Link Library'
+
+EXPORTS
+    ; Explicit exports can go here

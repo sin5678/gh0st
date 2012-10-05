@@ -1,0 +1,133 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "CJ60Lib"=.\CJ60Lib.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Src/CJ60Lib", KCAAAAAA
+    .
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "CJ60StaticLib"=.\CJ60StaticLib.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Src/CJ60Lib", SFAAAAAA
+    .
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "Demo_Controls"=..\Demo_Controls\Demo_Controls.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Src/Demo_Controls", NVAAAAAA
+    ..\demo_controls
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "Demo_DevStudio"=..\Demo_DevStudio\Demo_DevStudio.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Src/Demo_DevStudio", EOAAAAAA
+    ..\demo_devstudio
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "Demo_Explorer"=..\Demo_Explorer\Demo_Explorer.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Src/Demo_Explorer", USAAAAAA
+    ..\demo_explorer
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "Demo_Outlook"=..\Demo_Outlook\Demo_Outlook.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Src/Demo_Outlook", MJAAAAAA
+    ..\demo_outlook
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "StaticTest"=..\StaticTest\StaticTest.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Src/StaticTest", EWAAAAAA
+    ..\statictest
+    end source code control
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+    begin source code control
+    "$/Src/CJ60Lib", TEAAAAAA
+    d:\src\cj60lib
+    end source code control
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

@@ -1,0 +1,498 @@
+<html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<title>CJ60 Version 6.07 Readme</title>
+</head>
+
+<body>
+
+<h1><font face="Arial">MFC Extension Library<br>
+</font><font face="Arial" size="4">CJ60 Version 6.07 Readme</font></h1>
+
+<h2><font face="Arial" size="3">MFC Extension Library - CJ60Lib ( Updated for Visual C++
+6.0)</font></h2>
+<font face="arial">
+
+<p>This release is the result of your comments, and suggestions. I received several
+suggestions and bug reports, which I believe most have been addressed and fixed with this
+release. Please remember there is not a &quot;team&quot; of developers maintaining this
+code, only I, and it is done in my spare time, so you can expect some bugs. If you have
+comments or suggestions, feel free to drop me a line at <a
+href="mailto:kstowell@codejockeys.com">kstowell@codejockeys.com</a></p>
+
+<p><!-- The 'p' starts a paragraph of normal text --> </p>
+
+<p>The original library (MFCXLib) was renamed to CJ60Lib, in order to break any links that
+may have been established with any applications using the old library, and to establish a
+version control system. The library has the same functionality as the old one, however,
+there have been several enhancements for compatibility with Visual C++ 6.0.</p>
+
+<p><!-- The 'p' starts a paragraph of normal text --> </p>
+
+<p><strong>Follow these steps to setup your application to use CJ60Lib MFC extension
+library:</strong> 
+
+<ul>
+  <li>In your project settings, select the <strong>General</strong> tab. Make sure that <strong>Microsoft
+    Foundation Class </strong>is set to <strong>Use MFC in a shared DLL</strong>.</li>
+  <li>In your project settings, select the <strong>Link</strong> tab. Set the <strong>Category</strong>
+    to <strong>Input</strong>, and add <strong>../Lib</strong> to <strong>Additional Library
+    Path</strong>.</li>
+  <li>While still in the <strong>Link</strong> tab, change <strong>Category</strong> to <strong>General</strong>.
+    For <strong>Output Name</strong> (All Configurations), build to the <strong>../Lib</strong>
+    directory. This makes the execution and debugging easier, since both <strong>DLL</strong>
+    and <strong>EXE</strong> are located in the same directory. An example of this would be: <strong>../Lib/MyDemo.exe</strong>.</li>
+  <li>Select the C/C++ tab next. Change Category to Preprocessor, and add ../Include to
+    Additional Include Directories. </li>
+  <li>The last step would be to add the following two lines of code to your <strong>StdAfx.h</strong>
+    header file, which will import all exported classes, and grant access to your entire
+    application:<!-- start a block of source code --></li>
+</ul>
+
+<p><em><font color="#808000">#include &lt;CJ60Lib.h&gt;</font></em></p>
+
+<p><strong>In order to statically link to CJ60Lib, make the following changes:</strong> 
+
+<ul>
+  <li>In your project settings, select the <strong>General</strong> tab. Make sure that <strong>Microsoft
+    Foundation Class </strong>is set to <strong>Use MFC in a static library</strong>. </li>
+  <li>You will need to copy the resources from the CJ60 library to your project. The easiest
+    way to do this is to open the file CJ60Lib.rc, then drag and drop the resources into your
+    project<!-- The 'p' starts a paragraph of normal text --></li>
+</ul>
+
+<p>This library was written for version 4.71 or later of comctl32.dll. If you have an
+older version, you can download the latest version from the Microsoft site. <a
+href="http://www.microsoft.com/msdn/downloads/files/40Comupd.htm">Follow this link if you
+have an older version of comctl32.dll</a>. It is important to note that the library will
+not load if your comctl32.dll version is older than 4.71.</p>
+
+<p><!-- The 'p' starts a paragraph of normal text --> </p>
+
+<p><strong>Build errors, what to do:</strong></p>
+
+<p><!-- The 'p' starts a paragraph of normal text --> </p>
+
+<p>If you receive the following build error <font color="#CC9933"><em>&quot;#error :
+CJ60Lib requires a newer version of the SDK than you have!&quot;</em></font>, this means
+that you most likely are using Visual C++ 5, and either do not have the platform SDK
+installed, or you have an older version. You will need to download the latest version from
+Microsoft. <a href="http://msdn.microsoft.com/developer/sdk/default.htm">To get it, follow
+this link</a>.</p>
+
+<p>If you receive the following build error <font color="#CC9933"><em>&quot; Error: Can't
+find file CJ60Libd.lib.&quot;</em></font> This means you haven't built the library yet.
+YOU NEED TO BUILD the library first, this will generate the .lib and .dll files needed by
+the examples.</p>
+
+<p><!-- The 'p' starts a paragraph of normal text --> </p>
+
+<p><strong>Disclaimer:</strong></p>
+
+<p><!-- The 'p' starts a paragraph of normal text --> </p>
+
+<p>This source code in this library may be used in compiled form in any way you desire,
+Source file(s) may be redistributed unmodified by any means <strong>PROVIDING</strong>
+they are not sold for profit without the authors expressed written consent, and providing
+that this notice and the authors name and all copyright notices remain intact. If the
+source code is used in any commercial applications then a statement along the lines of:</p>
+
+<p><!-- The 'p' starts a paragraph of normal text --> </p>
+
+<p>&quot;<strong>Portions Copyright © 1998-99 Kirk Stowell</strong>&quot; must be
+included in the startup banner, &quot;About&quot; box or printed documentation. An email
+letting me know that you are using it would be nice as well. That's not much to ask
+considering the amount of work that went into this. This software is provided &quot;as
+is&quot; without express or implied warranty. Use it at your own risk! The author accepts
+no liability for any damage/loss of business that this product may cause.</p>
+
+<p><!-- The 'div' starts a dhtml section --> </p>
+<div id="Out00"><span id="Out01" class="Outline" style="cursor:hand" border="1">
+
+<p><font color="#CC9933">+ </span><u id="Out01" class="Outline" style="cursor: hand; ">Components
+found in the library</u> </font></p>
+<div id="Out01details" style="display:None">
+
+<table border="1" cellpadding="0" cellspacing="0" align="center">
+  <tr>
+    <td valign="top"><strong>Class Name:</strong></td>
+    <td valign="top" width="100%"><strong>Description:</strong></td>
+  </tr>
+  <tr>
+    <td valign="top"><font color="#CC9933">CCJCaption</font></td>
+    <td valign="top" width="100%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top"><font color="#CC9933">CCJControlBar</font></td>
+    <td valign="top" width="100%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top"><font color="#CC9933">CCJDockBar</font></td>
+    <td valign="top" width="100%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top"><font color="#CC9933">CCJDockContext</font></td>
+    <td valign="top" width="100%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top"><font color="#CC9933">CCJExplorerBar</font></td>
+    <td valign="top" width="100%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top"><font color="#CC9933">CCJFlatButton</font></td>
+    <td valign="top" width="100%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top"><font color="#CC9933">CCJFlatComboBox</font></td>
+    <td valign="top" width="100%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top"><font color="#CC9933">CCJFlatHeaderCtrl</font></td>
+    <td valign="top" width="100%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top"><font color="#CC9933">CCJFrameWnd</font></td>
+    <td valign="top" width="100%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top"><font color="#CC9933">CCJListCtrl</font></td>
+    <td valign="top" width="100%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top"><font color="#CC9933">CCJListView</font></td>
+    <td valign="top" width="100%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top"><font color="#CC9933">CCJMDIFrameWnd</font></td>
+    <td valign="top" width="100%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top"><font color="#CC9933">CCJMiniDockFrameWnd</font></td>
+    <td valign="top" width="100%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top"><font color="#CC9933">CCJOutlookBar</font></td>
+    <td valign="top" width="100%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top"><font color="#CC9933">CCJPagerCtrl</font></td>
+    <td valign="top" width="100%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top"><font color="#CC9933">CCJSearchEdit</font></td>
+    <td valign="top" width="100%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top"><font color="#CC9933">CCJSizeDockBar</font></td>
+    <td valign="top" width="100%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top"><font color="#CC9933">CCJTabCtrlBar</font></td>
+    <td valign="top" width="100%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top"><font color="#CC9933">CCJTabView</font></td>
+    <td valign="top" width="100%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top"><font color="#CC9933">CCJToolBar</font></td>
+    <td valign="top" width="100%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top"><font color="#CC9933">CCoolBar</font></td>
+    <td valign="top" width="100%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top"><font color="#CC9933">CCoolMenuManager</font></td>
+    <td valign="top" width="100%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top"><font color="#CC9933">CFixMFCToolBar</font></td>
+    <td valign="top" width="100%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top"><font color="#CC9933">CFlatToolBar</font></td>
+    <td valign="top" width="100%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top"><font color="#CC9933">CHyperLink</font></td>
+    <td valign="top" width="100%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top"><font color="#CC9933">CMenuBar</font></td>
+    <td valign="top" width="100%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top"><font color="#CC9933">CModuleVersion</font></td>
+    <td valign="top" width="100%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top"><font color="#CC9933">CShellPidl</font></td>
+    <td valign="top" width="100%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top"><font color="#CC9933">CShellTree</font></td>
+    <td valign="top" width="100%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top"><font color="#CC9933">CSHFileInfo</font></td>
+    <td valign="top" width="100%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td valign="top"><font color="#CC9933">CSubclassWnd</font></td>
+    <td valign="top" width="100%">&nbsp;</td>
+  </tr>
+</table>
+</div></div><div id="Out02"><span id="Out03" class="Outline" style="cursor:hand"
+border="1">
+
+<p><font color="#CC9933">+ </span><u id="Out03" class="Outline" style="cursor: hand; ">Library
+class overview</u> </font></p>
+<div id="Out03details" style="display:None">
+
+<p>Most of the classes found above have been implemented into example projects which are
+now included in this download. Below you will&nbsp;&nbsp;&nbsp;&nbsp; find an overview of
+the classes found in this library:</p>
+
+<p><img src="overview.gif" alt="overview.gif (30303 bytes)" WIDTH="798" HEIGHT="936"><!-- The 'div' starts a dhtml section --></p>
+</div></div><div id="Out04"><span id="Out05" class="Outline" style="cursor:hand"
+border="1">
+
+<p><font color="#CC9933">+ </span><u id="Out05" class="Outline" style="cursor: hand; ">Acknowledgements</u>
+</font></p>
+<div id="Out05details" style="display:None">
+
+<p>This would not have been possible without the following authors making their code
+freely available: 
+
+<ul>
+  <li><a href="mailto:Joerg.Koenig@rhein-neckar.de">Joerg Koenig</a> - For some ideas I got
+    for the 3D borders and using controls in toolbars from his cool CToolBarEx class. </li>
+  <li><a href="mailto:sofori@chat.carleton.ca">Selom Ofori</a> - For his classes on 'Browsing
+    Shell Namespace'.</li>
+  <li><a href="mailto:ShekarNarayanan@Hotmail.com">Shekar Narayanan</a> - For his 'Cool
+    Looking Menu' article which inspired me to write the CCJOutlookBar control. </li>
+  <li><a href="mailto:dirk_clemens@hotmail.com">Dirk Clemens</a> - For his 'Sizing
+    TabControlBar' class which I based CCJTabCtrlBar on. </li>
+  <li><a href="http://www.microsoft.com/msj">Paul DiLascia</a> - For all of his great work at
+    MSJ, and making his source code available to us.</li>
+  <li><a href="mailto:chris.maunder@codeguru.com">Chris Maunder</a> - For use of his
+    CHyperLink control, and all of his support and encouragement.</li>
+  <li><a href="mailto:zafir@dsp.com">Zafir Anjum</a> - For putting together such an excellent
+    site (<a href="http://www.codeguru.com">www.codeguru.com</a>), and making all those cool
+    MFC resources available. </li>
+  <li>Many thanks to Microsoft for making the source code available for MFC. Since most of
+    this work is a modification from existing classes and methods, this library would not have
+    been possible.</li>
+  <li>And to the rest of you for not letting me rest until I updated this library (again).
+    Many thanks to all of you, who have encouraged me to update the articles and code, and who
+    sent in bug reports and fixes.<!-- The 'div' starts a dhtml section --></li>
+</ul>
+</div></div><div id="Out06"><span id="Out07" class="Outline" style="cursor:hand"
+border="1">
+
+<p><font color="#CC9933">+ </span><u id="Out07" class="Outline" style="cursor: hand; ">What's
+new in this release</u> </font></p>
+<div id="Out07details" style="display:None">
+
+<p><!-- The 'div' starts a nested dhtml section --> </p>
+<div id="Out08"><span id="Out09" class="Outline" style="cursor:hand" border="1">
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#CC9933">&nbsp;+ </span><u id="Out09"
+class="Outline" style="cursor: hand; ">Changes made in Version 6.04</u> </font></p>
+<div id="Out09details" style="display:None">
+
+<ul>
+  <li>Added information on where to find the <a
+    href="http://msdn.microsoft.com/developer/sdk/default.htm">platform SDK</a>.</li>
+  <li>Added include file &lt;shlobj.h&gt; to SHFileInfo.cpp which was omitted.</li>
+  <li>Fixed a compatibility issue with Visual C++ 5, where resource constants were defined in
+    VC6 but not 5.</li>
+  <li>Fixed static build error, removed typo in FixTB.cpp which was causing this, thanks to <a
+    href="mailto:SteveQuick@worldnet.att.net">Steve Quick</a> for pointing this out.</li>
+  <li>Added resource files which were omitted by accident when I created the setup disk, these
+    files are now included.</li>
+  <li>Fixed bug when checking for comctl32.dll version, this is now fixed. Thanks to <a
+    href="mailto:ged2@govst.edu">Steve Nebes</a> for pointing this out.</li>
+</ul>
+</div></div><!-- end nested -->
+<!-- The 'div' starts a nested dhtml section -->
+<div id="Out10"><span id="Out11" class="Outline" style="cursor:hand"
+border="1">
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#CC9933">&nbsp;+ </span><u id="Out11"
+class="Outline" style="cursor: hand; ">Changes made in Version 6.05</u> </font></p>
+<div id="Out11details" style="display:None">
+
+<ul>
+  <li>Added two files which were missing from the CJ60Lib\res directory.</li>
+  <li>Fixed a bug with loading cursor in static builds.</li>
+  <li>Fixed accelerator problem with CCJFlatComboBox control.</li>
+</ul>
+</div></div><!-- end nested -->
+<!-- The 'div' starts a nested dhtml section -->
+<div id="Out12"><span id="Out13" class="Outline" style="cursor:hand"
+border="1">
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#CC9933">+ </span><u id="Out13"
+class="Outline" style="cursor: hand; ">Changes made in Version 6.06</u> </font></p>
+<div id="Out13details" style="display:None">
+
+<ul>
+  <li>Fixed problem with CTRL-TAB as mentioned by <a href="mailto:pierre_Guimont@mitel.com">Pierre
+    Guimont</a>, however the bug still exists when you actually click on the view itself.</li>
+  <li>Fixed the bug with the icons disappearing when you click a column in the flat header
+    control, Thanks to <a href="mailto:agao@opencon.com">Albert Gao</a> for pointing this out.</li>
+  <li>Fixed a typo in the OnLButtonUp() message in CCJControlBar class. There was an extra
+    line of code, which was removed. Thanks to <a href="mailto:ystamat@mail.datamedia.gr">Ioannis
+    Stamatopoulos</a> for bringing this to my attention.</li>
+  <li>Added support for multiple rows in the CCJTabCtrlBar class. Thanks to <a
+    href="mailto:rashidt@consort.co.uk">Rashid Thadha</a> for this fix.</li>
+  <li>Made some cosmetic changes to CCJControlBar, CCJFlatHeader and CCJExplorerBar classes to
+    add a more &quot;authentic look&quot;.</li>
+</ul>
+</div></div><!-- end nested -->
+<!-- The 'div' starts a nested dhtml section -->
+<div id="Out14"><span id="Out15" class="Outline" style="cursor:hand"
+border="1">
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#CC9933">+ </span><u id="Out15"
+class="Outline" style="cursor: hand; ">Changes made in Version 6.07</u> </font></p>
+<div id="Out15details" style="display:None">
+
+<ul>
+  <li><a HREF="mailto:Allknowing@earthlink.net">Christopher Brown</a> - Made some some
+    modifications to correct icon resource leak, and eliminate screen flicker in CCJOutlookBar
+    control.</li>
+  <li>Changed images list's to pointer vars passed into CCJOutlookBar class. </li>
+  <li><a HREF="mailto:fremat@algonet.se">Fredfrik Mattsson</a> - Added GetFileExt() to return
+    the file extension in the class CSHFileInfo() per request.</li>
+  <li><a HREF="mailto:michael.home@topdogg.com">Michael Lange</a> - Fix for memory leak in
+    CMyItemData structure, added a destructor that calls text.Empty().</li>
+  <li><a HREF="mailto:kbv@omegasoftware.com">Boris Kartamishev</a> - Fix for resource ID bug
+    in CCoolMenuManager class.</li>
+  <li><a HREF="mailto:mizoguti@m2.sys.to.casio.co.jp">Takehiko Mizoguti</a> - Overloaded
+    PopulateTree(LPCTSTR lpPath) in the class CShellTree to fill the tree based upon path.</li>
+  <li><a HREF="mailto:jeremyhorgan@hotmail.com">Jeremy Horgan</a> - During accelerator key
+    processing OnInitMenuPopup() calls ConvertMenu() which allocates a new CMyItemData for
+    each menu item. This is memory is normally freed by a call to OnMenuSelect(), which is not
+    called when processing accelerator keys. This results in a memory leak. This was fixed by
+    modifying the ~CCoolMenuManager() destructor.</li>
+  <li>Fixed repainting problem with CCJFlatHeaderCtrl() when header is moved or window is
+    resized. The class now uses log font instead of hard coded Tahoma font.</li>
+  <li><a HREF="mailto:pgb@mrjinx.demon.co.uk">Phil Baxter</a> - Fixed the following problems
+    when tabs are added after creation with CCJTabCtrlBar: <ul>
+      <li>The tab was created, but the ListView that was showing on the tab was not visible.</li>
+      <li>Get an assertion when the AddView function attempts to perform the AddTool function.</li>
+      <li>When a new view is added, although you set it to be the active view, it isn't raised to
+        the top of the stack in the display.</li>
+      <li>got the tooltips to behave correctly when a tab is added and removed, in addition.</li>
+      <li>Added two new member functions:<br>
+        void SetViewToolTip(int nView, LPCTSTR lpszLabel);<br>
+        void SetViewToolTip(CRuntimeClass *pViewClass, LPCTSTR lpszLabel);</li>
+    </ul>
+  </li>
+  <li><a HREF="mailto:mmanzo@ieee.org">Michael Manzo</a> - Added CCJTabView, a view class
+    which can be used as an alternative to CCJTabCtrlBar class. Class can also be used as a
+    view in SDI and MDI applications.</li>
+  <li><a HREF="mailto:persys@adinet.com.uy">Gonzalo Pereyra</a> - CCJControlBar calls default
+    wnd proc if no context menu is defined </li>
+  <li><a HREF="mailto:s_killen@yahoo.com">Scott Killen</a> - If your frame is not your main
+    window in your app, you cannot dock a floating CCJControlBar. Changed
+    (CFrameWnd*)AfxGetApp()-&gt;m_pMainWnd to (CFrameWnd*)m_pDockSite in CanDockDockBar() and
+    DockSizeBar() </li>
+  <li>Added further functionality to CCJCaption() class so that you can define text size, text
+    color, border size, border and background color. Basically to create a look similar to
+    Outlook's Captions.</li>
+  <li>Added InitializeFlatHeader() to CCJListCtrl() and CCJListView(), in order to initialize
+    the list control manually.</li>
+  <li><a HREF="mailto:ABancroft@lgc.com">Andrew Bancroft</a> - Since we've already added the
+    entire toolbar to the imagelist we need to increment nNextImage even if we didn't add this
+    button to m_mapIDtoImage in the LoadToolbar() method in CCoolMenuManager().</li>
+  <li>Added AfxRegisterWndClass() to create method to handle double clicks in order to enable
+    toggle docking in the CCJControlBar class.</li>
+  <li>Fixed tooltip related memory leak with CCJControlBar.</li>
+  <li>Added compatibility for UNICODE builds.</li>
+  <li><a href="mailto:gunnars@sybase.com">Ola Gunnars</a> for creating DevStudio, Explorer and
+    Outlook project wizards. These are now included in the CJ Extension Library download.</li>
+  <li><a href="mailto:mizoguti@m2.sys.to.casio.co.jp">Takehiko Mizoguti</a> for the Japanese
+    translation of CJ Extension resources, and for writing the CCJFrameInfo class.</li>
+  <li>Changed CCJToolBar() class to handle both Office and DevStudio style to toolbars. To use
+    Office toolbars, use the CreateEx() method, otherwise your toolbars will look like
+    DevStudio.</li>
+  <li><a href="mailto:patb@softimage.com">Patrick Bergeron</a> has fixed the following bugs: <ul>
+      <li>CJFlatButton.cpp - Moving the cursor over the flat button doesn't raise the button right
+        away. We have to wait for the first timer message to arrive, which is a bit annoying. It
+        gives the impression that the system isn't very responsive. So in the OnMouseMove method,
+        we call OnTimer(1) to force the initial update of the button.</li>
+      <li>CJFlatButton.cpp -&nbsp; Sometimes, a CJFlatButton would stay in a raised state when
+        moving the mouse quickly over the client area of a few CJFlatButtons. The reason turned
+        out to be the use of a static (ahem, global) variable &quot;bPainted&quot;.The simple fix
+        for this was to put bPainted as a member variable (&quot;m_bPainted&quot;) and use this
+        member variable instead. Flat buttons are now much more responsive and behave correctly in
+        all cases.</li>
+      <li>CJControlBar.cpp - I had a dialog nested in a CJControlBar. Unfortunately when I tried
+        to dock it to the left or right, the bottom part of my dialog would be clipped off. Fix:
+        When in docked mode, ::CalcDynamicLayout needed to return the desired size, while taking
+        into&nbsp;&nbsp;&nbsp; account the size of the gripper bar (if any). Simply added a simple
+        &quot;+GetMinExt()&quot; Now my dialog's bottom doesn't get clipped. Woo-ha.</li>
+      <li>CJControlBar.cpp - When nesting a CDialog based window inside a CJControlBar, the 3D
+        rect drawn by ::OnEraseBkgnd would be overwritten by the top and left dialog borders. The
+        problem was caused by the fact that in the ::OnWindowPosChanged() method, the rectangle
+        which is used to move the window contains the border. A simple call to rc.DeflateRect(1,1)
+        solved this problem.</li>
+      <li>CJControlBar.cpp - Added a call to UpdateWindow() in ::OnEraseBkgnd(). This helps with
+        the flickering a bit, but I Am not sure this is the correct way to go. Incorporate at your
+        own risks.</li>
+      <li>CJControlBar.cpp -&nbsp;&nbsp;&nbsp;&nbsp; Added 2 ASSERT()s in ::OnMouseMove(). This
+        was not to fix a bug, but at one point I was seeing strange </li>
+      <li>things that lead me to add these asserts. They don't do anything bad, so why remove
+        them?</font><font face="arial"></li>
+    </ul>
+  </li>
+  <li><a href="mailto:persys@adinet.com.uy">Gonzalo Pereyra</a> - CJTabCtrlBarl.cpp - I wanted
+    to trap NM_RETURN notifications in my CTreeView Class. I couldn't... It turns out that
+    CControlbar::PreTranslateMessage() will eat all dialog messages...It will never get
+    dispatched to my window. So i Overrided it in : CCJTabCtrlBar::PreTranslateMessage(). this
+    will allow for message reflection and we will get NM_RETURN. I don't know if this a good
+    solution but for now , it works.</li>
+  <li><a href="mailto:pjl@nildram.co.uk">Philip Lee</a> - CJFlatButton.cpp - the HICON
+    returned by CButton::SetIcon should be destroyed using ::DestroyIcon.</li>
+  <li><a href="mailto:paul@m130.aone.net.au">Paul Andreassen</a> - CJControlBar.cpp and
+    CJSizeDockBar.cpp - help with eliminating flicker in control bars.</li>
+</ul>
+</div></div><!-- end nested -->
+</div></div>
+
+<p><script language="JavaScript">
+			
+		function clickHandler()
+		{
+			  var targetId;
+			  var srcElement = window.event.srcElement;
+			  var targetElement;
+			  
+			  if (srcElement.className == "Outline")
+			  {
+				  targetId = srcElement.id + "details";
+				  targetElement = document.all(targetId);
+				  
+				  if (targetElement.style.display == "none") {
+					  targetElement.style.display = "";
+				  }
+				  
+				  else {
+					  targetElement.style.display = "none";
+				  }
+			  }
+		}
+		  
+		document.onclick = clickHandler;
+		</script> <!-- End Java script --> <!-- DOWNLOAD SOURCE --> </p>
+
+<p>This page was last updated on <!--webbot bot="Timestamp" startspan S-Type="EDITED"
+S-Format="%m/%d/%y" -->03/14/99<!--webbot bot="Timestamp" i-checksum="14010" endspan -->. </p>
+</body>
+</font>
+</html>
